@@ -16,8 +16,8 @@ int findMin(int *a, int x, int y){
 
 		if(a[l] <= a[r]) return l;
 		int mid = (l + r) / 2;
-		int next = (mid + 1) % n;
-		int prev = (mid - 1 + n) % n;
+		int next = (mid + 1) % n;  // %n is used to Avoid Overflow 
+		int prev = (mid - 1 + n) % n;	// +n is used to Avoid Underflow
 		if(a[mid] <= a[prev] and a[mid] <= a[next]) return mid;
 		else if(a[mid] >= a[l]) l = mid + 1;
 		else if(a[mid] <= a[r]) r = mid - 1;

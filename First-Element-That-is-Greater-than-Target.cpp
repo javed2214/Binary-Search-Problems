@@ -1,4 +1,5 @@
 // First Element in a Sorted Array that is Greater than Target Value
+// Time Complexity : O(Log(n))
 
 #include<bits/stdc++.h>
 using namespace std;

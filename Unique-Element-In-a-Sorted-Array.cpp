@@ -1,6 +1,5 @@
 // Unique Element in a Sorted Array
-// Given a Sorted Array in which all the Elements are Occurring Twice Except one,
-// Find that Unique Element
+// Given a Sorted Array in which all the Elements are Occurring Twice Except one, Find that Unique Element
 
 // First Method : Taking XOR of all the Elements - Time : O(n)
 // Second : Binary Search - Time : O(log(n))

@@ -4,35 +4,33 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int binary_search(int *a, int n, int target){
+int binary_search(int *a, int n, int x){
 
-	int start = 0, end = n - 1, res = -1;
-	
-	while(start <= end){
+    int start = 0, end = n - 1;
+    int res = -1;
 
-		int mid = start + (end - start) / 2;
+    while(start <= end){
 
-		if(a[mid] >= target){
-			res = a[mid];
-			end = mid - 1;
-		}
-		if(a[mid] < target) start = mid + 1;
-	}
-	return res;
+        int mid = start + (end - start) / 2;
+        if(a[mid] == x){
+            res = mid;
+            start = mid + 1;
+        }
+        else if(a[mid] < x) start = mid + 1;
+        else end = mid - 1;
+    }
+    return res + 1 < n ? a[res + 1] : a[res];
 }
 
 int main(){
 
-	#ifndef ONLINE_JUDGE
-		freopen("input.txt", "r", stdin);
-	#endif
+    int a[] = {1,1,2,3,3,3,4,5,6,8,8,9,10,10};
+    int n = sizeof(a) / sizeof(int);
 
-	int n, target; cin >> n >> target;
-	
-	int a[n];
-	for(int i = 0; i < n; i++) cin >> a[i];
+    int x;
+    cin >> x;
 
-	cout << binary_search(a, n, target);
-
-	return 0;
+    cout << binary_search(a, n, x);
+    
+    return 0;
 }

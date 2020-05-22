@@ -2,7 +2,7 @@
 // A Peak Element is an Element which is Greater than its Neighbour
 // Time Complexity : O(log(n))
 // Binary Search
-// Return the Index of Peak Element
+// Return the Index of any One Peak Element
 
 #include<bits/stdc++.h>
 using namespace std;

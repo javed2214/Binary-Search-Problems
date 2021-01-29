@@ -9,8 +9,6 @@ using namespace std;
 
 int peakElement(int *a, int n){
 
-	if(n <= 1) return 0;
-
 	int l = 0;
 	int r = n - 1;
 
